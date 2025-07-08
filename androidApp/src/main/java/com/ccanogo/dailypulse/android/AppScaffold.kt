@@ -13,7 +13,7 @@ import com.ccanogo.dailypulse.android.screens.AboutScreenContent
 import com.ccanogo.dailypulse.android.screens.ArticlesScreenContent
 import com.ccanogo.dailypulse.android.screens.Screens
 import com.ccanogo.dailypulse.articles.presentation.ArticlesViewModel
-
+// import com.ccanogo.dailypulse.android.screens.SourcesScreen
 @Composable
 fun AppScaffold(/*articlesViewModel: ArticlesViewModel*/) {
     val navController = rememberNavController()
@@ -46,6 +46,12 @@ fun AppNavHost(
                 // articlesViewModel,
             )
         }
+
+        /**composable(Screens.SOURCES.route) {
+            SourcesScreen(
+                onUpButtonClick = { navController.popBackStack() }
+            )
+        }*/
 
         composable(Screens.ABOUT_DEVICE.route) {
             AboutScreenContent (
